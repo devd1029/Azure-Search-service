@@ -1,0 +1,21 @@
+<div class="form-group">
+  <div class="row m-2">
+    <label class="col-sm-3 col-form-label">Language Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="Language" placeholder="eg : Hindi" required/>
+    </div>
+  </div>
+  <br>
+  <br />
+  <div class="row m-2">
+    <label class="col-sm-3 col-form-label">Country</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="Country" placeholder="eg : India" required/>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-success" data-dismiss="modal" (click)=addNew()>Add</button>
+    <button type="button" typeof="reset" class="btn btn-danger" (click)="clear()">clear</button>
+
+  </div>
+</div>

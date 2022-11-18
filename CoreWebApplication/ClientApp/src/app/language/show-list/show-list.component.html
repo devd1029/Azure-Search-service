@@ -1,0 +1,51 @@
+
+<h3 class="d-flex justify-content-center">Available Languages</h3>
+<div class="d-flex mr-2 justify-content-right pull-right">
+  <button class="btn btn-success glyphicon glyphicon-plus float-right m-2" (click)=toggleDisplayDiv()></button>
+</div>
+<table class="table table-inverse table-responsive">
+  <thead>
+    <tr>
+      <th>
+        LanuageID
+      </th>
+      <th>
+        Country
+      </th>
+      <th>
+        Language
+      </th>
+      <th>options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let language of Languagelist">
+      <td>{{language.langID}}</td>
+      <td>{{language.country_Language}}</td>
+      <td>{{language.language}}</td>
+      <td><button type="button" class="btn btn-primary mr-1 glyphicon glyphicon-edit"></button></td>
+    </tr>
+  </tbody>
+</table>
+<!--Modal to add new language-->
+
+ <!-- Modal -->
+<div class="" *ngIf="isShowDiv">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" (click)=toggleDisplayDiv()>&times;</button>
+        <h4 class="modal-title">Add new language</h4>
+      </div>
+      <div class="modal-body">
+        <app-add-new></app-add-new>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
